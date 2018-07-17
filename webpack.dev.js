@@ -23,7 +23,7 @@ webpackDevConfig.plugins = [
   new HotModuleReplacementPlugin(),
 ];
 
-webpackDevConfig.rules = [
+webpackDevConfig.module.rules = [
   {
     test: /\.css$/,
     use: [
