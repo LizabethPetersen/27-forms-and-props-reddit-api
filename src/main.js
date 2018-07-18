@@ -1,12 +1,13 @@
 import React from 'react';
 import { render as renderDom } from 'react-dom';
-// import App from './components/app/app';
+import App from './components/app/app';
 
 class Main extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Did I make it?</h1>
+        <App />
+        <main>Search</main>
       </React.Fragment>
     );
   }
