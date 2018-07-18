@@ -27,16 +27,26 @@ export default class RedditList extends React.Component {
     this.setState({ search });
   }
 
+  handleLimits = (event) => {
+    const limits = event.target.value;
+    this.setState({ limits });
+  }
+
   render() {
     return (
       <div className="reddit-list">
-          <form onSubmit={ this.handleSubmit }>
+          <form>
             <input
              onChange={ this.handleSearch }
              placeholder="Search..."
              />
+             <input
+             onChange={ this.handleLimits }
+             placeholder="# Items to Return..."
+             />
+             <button onSubmit={ this.handleSubmit }>Submit</button>
             {
-              this.props.reddit.map((reddit, index) => {
+              this.props.redditItems.map((reddit, index) => {
                 return (
                     <div key={index}>
                       <div
@@ -58,6 +68,6 @@ export default class RedditList extends React.Component {
 
 RedditList.propTypes = {
   searchMethod: PropTypes.func,
-  reddit: PropTypes.array,
+  redditItems: PropTypes.array,
   loadList: PropTypes.func,
 };
