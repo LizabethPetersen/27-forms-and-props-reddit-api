@@ -49,7 +49,7 @@ export default class App extends React.Component {
       <main className="container">
         <RedditList
           searchMethod={ console.log }
-          reddit={ [{ title: 'My Title', url: 'Any Url' }] }
+          redditItems={ [{ title: 'My Title', url: 'Any Url' }] }
           loadList={ () => console.log('loaded') }
         />
       </main>
